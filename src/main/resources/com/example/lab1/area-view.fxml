@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<SplitPane id="applicationWrapper" dividerPositions="0.7506684491978608" maxHeight="-Infinity" maxWidth="-Infinity"
+           minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+           xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.lab1.ShooterController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <SplitPane dividerPositions="0.857358870967742" orientation="VERTICAL" prefHeight="398.0" prefWidth="446.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <SplitPane dividerPositions="0.20315315315315316" prefHeight="338.0"
+                           prefWidth="445.0">
+                    <AnchorPane id="shooterWrapper" fx:id="shootersArea" minHeight="0.0" minWidth="0.0"
+                                prefHeight="337.0" prefWidth="96.0">
+                    </AnchorPane>
+                    <AnchorPane fx:id="gameArea" minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                prefWidth="100.0">
+                        <Separator id="separator1" layoutX="242.0" layoutY="-1.0" orientation="VERTICAL"
+                                   prefHeight="337.0" prefWidth="0.0"/>
+                        <Separator id="separator2" layoutX="317.0" layoutY="-1.0" orientation="VERTICAL"
+                                   prefHeight="338.0" prefWidth="0.0"/>
+                    </AnchorPane>
+                </SplitPane>
+            </AnchorPane>
+            <AnchorPane id="buttonsWrapper" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <Button fx:id="connectButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false"
+                        onAction="#onConnectButtonClick" prefHeight="26.0" prefWidth="64.0" text="Connect"/>
+                <Button fx:id="pauseButton" disable="true" layoutX="182.0" layoutY="13.0"
+                        mnemonicParsing="false" onAction="#onPauseButtonClick" prefHeight="26.0"
+                        prefWidth="64.0" text="Pause"/>
+                <Button fx:id="resumeButton" disable="true" layoutX="253.0" layoutY="13.0"
+                        mnemonicParsing="false" onAction="#onResumeButtonClick" prefHeight="26.0"
+                        prefWidth="64.0" text="Resume"/>
+                <Button fx:id="readyButton" disable="true" layoutX="84.0" layoutY="13.0" mnemonicParsing="false"
+                        onAction="#onReadyButtonClick" prefHeight="26.0" prefWidth="64.0" text="Ready"/>
+                <Button fx:id="shootButton" disable="true" layoutX="367.0" layoutY="13.0"
+                        mnemonicParsing="false" onAction="#onShootButtonClick" prefHeight="26.0"
+                        prefWidth="64.0" text="Shoot"/>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+    <AnchorPane id="scoreWrapper" minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="204.0">
+        <VBox fx:id="infoBoxesArea" spacing="20.0">
+            <padding>
+                <Insets top="20.0"/>
+            </padding>
+
+        </VBox>
+
+        <Button fx:id="leaderboardButton" disable="true" layoutX="33.0" layoutY="358.0" mnemonicParsing="false"
+                onAction="#onLeaderboardButtonClick" text="Leaderboard"/>
+    </AnchorPane>
+</SplitPane>
